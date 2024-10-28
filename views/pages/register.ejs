@@ -1,28 +1,49 @@
+<!-- Declaring the document type and setting language to English -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Setting character encoding for the document to UTF-8 for broad character support -->
     <meta charset="UTF-8">
+    <!-- Ensuring compatibility with older versions of Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Enabling responsive scaling on various screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking to the custom stylesheet for additional styling -->
     <link rel="stylesheet" href="/css/style.css">
+    <!-- Linking to Bootstrap CSS for a consistent, pre-defined style -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Setting the page title that appears in the browser tab -->
     <title>Register</title>
 </head>
 <body>
+    <!-- Main container for page content -->
     <div class="container">
+        <!-- Heading for the registration form -->
         <h2 class="mt-5">Register</h2>
+        
+        <!-- Form to handle user registration, sending data via POST to /register -->
         <form action="/register" method="POST">
+            
+            <!-- Form group for entering the username -->
             <div class="form-group">
-                <label for="username">Username</label>
+                <label for="username">Username</label> <!-- Label for the username field -->
+                <!-- Input field for the username, styled with Bootstrap and required -->
                 <input type="text" class="form-control" id="username" name="username" required>
             </div>
+            
+            <!-- Form group for entering the password -->
             <div class="form-group">
-                <label for="password">Password</label>
+                <label for="password">Password</label> <!-- Label for the password field -->
+                <!-- Password input field, styled with Bootstrap and required for validation -->
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
+            
+            <!-- Submit button to register the user -->
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
     </div>
+
+    <!-- JavaScript for displaying a confirmation alert upon form submission -->
     <script>
         document.querySelector('form').addEventListener('submit', function() {
             alert('Thank you for registration!');

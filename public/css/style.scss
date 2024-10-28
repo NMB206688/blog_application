@@ -1,9 +1,11 @@
+/* Styling the body element to set the background and font for the entire page */
 body {
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Applies a light gray background for a clean and neutral look */
+    font-family: Arial, sans-serif; /* Sets a modern, easy-to-read font for all text on the page */
 }
 
+/* Styling the container class to control positioning and width */
 .container {
-    margin-top: 50px;
-    max-width: 500px;
+    margin-top: 50px; /* Adds 50px of space above the container, centering it vertically on the page */
+    max-width: 500px; /* Sets the maximum width to 500px, keeping content comfortably readable on larger screens */
 }

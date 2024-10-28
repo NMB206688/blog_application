@@ -57,3 +57,6 @@ A simple blog application built with Node.js, Express, MongoDB, and EJS. This ap
 1. **Start the MongoDB server:**
 
     Make sure your MongoDB server is running. If you are using
+2. open the Terminal enter 
+    npx nodemon app.js
+    

@@ -1,28 +1,48 @@
-<!-- views/pages/newBlog.ejs -->
+<!-- Declaring the document type and setting language to English -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Setting character encoding for the document to UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Enabling compatibility with older versions of Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Ensuring responsive scaling for mobile-friendly design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking to the custom stylesheet for additional styling -->
     <link rel="stylesheet" href="/css/style.css">
+    <!-- Linking to Bootstrap CSS for pre-defined styles and layout options -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Setting the page title that appears in the browser tab -->
     <title>Create Blog</title>
 </head>
 <body>
+    <!-- Main container for page content -->
     <div class="container">
+        <!-- Page heading for creating a new blog post -->
         <h2 class="mt-5">Create New Blog</h2>
+        
+        <!-- Form to create a new blog, sending data via POST request to the /blogs route -->
         <form action="/blogs" method="POST">
+            
+            <!-- Form group for entering the blog title -->
             <div class="form-group">
-                <label for="title">Title</label>
+                <label for="title">Title</label> <!-- Label for the title input field -->
+                <!-- Input field for the blog title, styled with Bootstrap, and set as required -->
                 <input type="text" class="form-control" id="title" name="title" required>
             </div>
+            
+            <!-- Form group for entering the blog content -->
             <div class="form-group">
-                <label for="content">Content</label>
+                <label for="content">Content</label> <!-- Label for the content textarea -->
+                <!-- Textarea for blog content, styled with Bootstrap, and set as required with 5 rows by default -->
                 <textarea class="form-control" id="content" name="content" rows="5" required></textarea>
             </div>
+            
+            <!-- Submit button to create the new blog post -->
             <button type="submit" class="btn btn-primary">Create</button>
         </form>
+        
+        <!-- Cancel button linking back to the blogs page without submitting the form -->
         <a href="/blogs" class="btn btn-secondary mt-3">Cancel</a>
     </div>
 </body>

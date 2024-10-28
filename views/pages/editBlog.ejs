@@ -1,28 +1,47 @@
-<!-- views/pages/editBlog.ejs -->
+<!-- Declaring the document type and setting language to English -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Setting character encoding for the document to UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Making the page compatible with older versions of Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Ensuring the page scales correctly on different screen sizes for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking to the custom stylesheet for additional styling -->
     <link rel="stylesheet" href="/css/style.css">
+    <!-- Linking to Bootstrap CSS for pre-defined styles and layout options -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Setting the title that appears in the browser tab -->
     <title>Edit Blog</title>
 </head>
 <body>
     <div class="container">
+        <!-- Page header displaying "Edit Blog" as the title -->
         <h2 class="mt-5">Edit Blog</h2>
+
+        <!-- Form to edit a blog post; the action URL includes the blog's unique ID for identification -->
         <form action="/blogs/edit/<%= blog._id %>" method="POST">
+            
+            <!-- Form group for editing the title of the blog -->
             <div class="form-group">
-                <label for="title">Title</label>
+                <label for="title">Title</label> <!-- Label for the title input field -->
+                <!-- Input for the blog title, pre-filled with the current title from the blog object -->
                 <input type="text" class="form-control" id="title" name="title" value="<%= blog.title %>" required>
             </div>
+            
+            <!-- Form group for editing the content of the blog -->
             <div class="form-group">
-                <label for="content">Content</label>
+                <label for="content">Content</label> <!-- Label for the content textarea -->
+                <!-- Textarea for blog content, pre-filled with the current content from the blog object -->
                 <textarea class="form-control" id="content" name="content" rows="5" required><%= blog.content %></textarea>
             </div>
+            
+            <!-- Submit button to update the blog post -->
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
+
+        <!-- Link to cancel the edit and go back to the blogs list without making changes -->
         <a href="/blogs" class="btn btn-secondary mt-3">Cancel</a>
     </div>
 </body>

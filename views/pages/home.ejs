@@ -1,23 +1,34 @@
-<!-- views/pages/home.ejs -->
+<!-- Declaring the document type and setting language to English -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Setting character encoding for the document to UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Ensuring compatibility with Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Setting the viewport to make the page responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking to the custom stylesheet for additional styling -->
     <link rel="stylesheet" href="public/css/style.css">
+    <!-- Linking to Bootstrap CSS for pre-defined styles and layout options -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Setting the title that appears in the browser tab -->
     <title>Home</title>
 </head>
 <body>
+    <!-- Main container for page content -->
     <div class="container">
+        <!-- Page heading welcoming users to the blog application -->
         <h2 class="mt-5">Welcome to the Blog Application!</h2>
-        <a href="/register" class="btn btn-primary">Register</a>
-        <a href="/login" class="btn btn-secondary">Login</a>
-        <a href="/blogs" class="btn btn-success">View Blogs</a>
-        <a href="/users" class="btn btn-info">View Registered Users</a>
         
+        <!-- Button to navigate to the registration page -->
+        <a href="/register" class="btn btn-primary">Register</a>
+        <!-- Button to navigate to the login page -->
+        <a href="/login" class="btn btn-secondary">Login</a>
+        <!-- Button to navigate to the blogs page -->
+        <a href="/blogs" class="btn btn-success">View Blogs</a>
+        <!-- Button to navigate to the page displaying registered users -->
+        <a href="/users" class="btn btn-info">View Registered Users</a>
     </div>
-    
 </body>
 </html>

@@ -1,16 +1,27 @@
+<!-- Declaring the document type and setting language to English -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Setting character encoding for the document to UTF-8 for universal character support -->
     <meta charset="UTF-8">
+    <!-- Enabling compatibility mode for Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Enabling responsive scaling for mobile-friendly design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking to the custom stylesheet for additional styling -->
     <link rel="stylesheet" href="/css/style.css">
+    <!-- Linking to Bootstrap CSS for pre-defined styles and layout options -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Setting the title that appears in the browser tab -->
     <title>Welcome</title>
 </head>
 <body>
+    <!-- Main container for page content -->
     <div class="container">
+        <!-- Welcome message displaying the logged-in user's username dynamically -->
         <h2 class="mt-5">Welcome, <%= username %>!</h2>
+        
+        <!-- Logout button to end the session and redirect the user -->
         <a href="/logout" class="btn btn-danger">Logout</a>
     </div>
 </body>

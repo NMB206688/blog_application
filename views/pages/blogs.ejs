@@ -1,28 +1,45 @@
-<!-- views/pages/blogs.ejs -->
+<!-- Declaring the document type and setting language to English -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Setting character encoding for the document to UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Making the page compatible with older versions of Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Ensuring the page scales correctly on different screen sizes for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking to the custom stylesheet for additional styling -->
     <link rel="stylesheet" href="/css/style.css">
+    <!-- Linking to Bootstrap CSS for pre-defined styles and layout options -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Setting the title that appears in the browser tab -->
     <title>Blogs</title>
 </head>
 <body>
     <div class="container">
+        <!-- Page header displaying the title -->
         <h2 class="mt-5">All Blogs</h2>
+        
+        <!-- Link to create a new blog, styled as a green "Create New Blog" button -->
         <a href="/blogs/new" class="btn btn-success mb-3">Create New Blog</a>
+        
+        <!-- Looping through each blog object in the 'blogs' array and displaying its content -->
         <% blogs.forEach(blog => { %>
-            <div class="card mb-3">
+            <div class="card mb-3"> <!-- Bootstrap card for each blog entry -->
                 <div class="card-body">
+                    <!-- Displaying the blog title inside a card title -->
                     <h5 class="card-title"><%= blog.title %></h5>
+                    <!-- Displaying the blog content inside a card text -->
                     <p class="card-text"><%= blog.content %></p>
+                    <!-- Link to edit the blog post, passing the blog's unique ID in the URL -->
                     <a href="/blogs/edit/<%= blog._id %>" class="btn btn-primary">Edit</a>
+                    <!-- Link to delete the blog post, passing the blog's unique ID in the URL -->
                     <a href="/blogs/delete/<%= blog._id %>" class="btn btn-danger">Delete</a>
                 </div>
             </div>
         <% }) %>
+        
+        <!-- Link to return to the home page -->
         <a href="/" class="btn btn-primary mt-3">Back to Home</a>
     </div>
 </body>
